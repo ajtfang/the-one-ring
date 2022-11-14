@@ -1,0 +1,69 @@
+\documentclass{article}
+
+\usepackage{Ring}
+\usepackage[sortcites,
+backend=biber,
+date=year,
+style=numeric-comp,
+doi=false,
+isbn=false,
+url=false,
+eprint=true]{biblatex}
+%% Bibliography Customization
+% \DeclareNameAlias{author}{family-given}
+% \AtEveryBibitem{
+%   \clearfield{month}
+%   \clearfield{url}
+%   \clearfield{urlyear}
+%   \clearfield{urlmonth} 
+%   \ifentrytype{online}{
+%     \clearfield{year}}
+%   {
+%     \clearfield{eprint}}
+% }
+% \renewbibmacro*{volume+number+eid}{%
+%   \printfield{volume}%
+% %  \setunit*{\adddot}% DELETED
+%   \setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+%   \printfield{number}%
+%   \setunit{\addcomma\space}%
+%   \printfield{eid}}
+% \DeclareFieldFormat[article]{volume}{\textbf{#1}}
+% \DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+% \DeclareFieldFormat*{title}{\textit{#1}}
+% \DeclareFieldFormat{journaltitle}{#1\isdot}
+% \renewbibmacro{in:}{}
+% \addbibresource{Ring.bib}
+\title{The One Ring}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item The first thing would be to set up the spectral analysis. I
+  suspect that this should be similar to what can be done for
+  Schwarzschild, although I'm not sure whether we would need Gevray
+  spaces. Ideally, the only tools you would need are redshift
+  estimates and the $\p_t$ estimate. (I don't think this is necessary
+  since we are only interested in studying growing modes.)
+\item With the spectral theory, we want to see ideally that the black
+  string mode is isolated (it is part of the point spectrum). This
+  could be seen by proving some Fredholm property of the resolvent (or
+  by basic spectral theory if the problem allows for that).
+\item The next step is to study the perturbation theory, here, I think
+  the main difficulty will center around the fact that we need to make
+  sure that perturbing a true mode generates a true mode. We know that
+  the harmonic gauge constraint is propagated by a wave-type operator,
+  so the modes there can be perturbed in a good way. For the pure
+  gauge modes, we should see if theres a way to use the $W_{tztz}$
+  condition.
+\item 
+\end{enumerate}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
