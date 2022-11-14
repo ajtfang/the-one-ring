@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.8.11)  14 NOV 2022 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.8.11)  14 NOV 2022 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1144,28 +1144,36 @@ LaTeX Warning: No \author given.
 {C:/Users/shofl/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (Outline.aux)
 Package rerunfilecheck Info: File `Outline.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 65B9A853E0A756CE9E55580F361D21F0;1448.
 Package logreq Info: Writing requests to 'Outline.run.xml'.
 \openout1 = `Outline.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21871 strings out of 478337
- 387693 string characters out of 2836666
- 1100929 words of memory out of 3000000
- 40021 multiletter control sequences out of 15000+600000
- 483170 words of font info for 79 fonts, out of 8000000 for 9000
+ 21902 strings out of 478337
+ 388081 string characters out of 2836666
+ 1108944 words of memory out of 3000000
+ 40036 multiletter control sequences out of 15000+600000
+ 484736 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,6n,91p,682b,801s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 87i,8n,91p,682b,801s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\shofl\AppData\Local\MiKTeX\fonts/pk/ljfour/public/mathabx/dpi600\m
 atha10.pk><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shofl/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Outline.pdf (1 page, 50549 bytes).
+onts/cm/cmbx10.pfb><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/shofl/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/shofl/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/shofl/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/shofl/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/s
+hofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Users/shofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/shofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmti10.pfb>
+Output written on Outline.pdf (1 page, 146249 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
