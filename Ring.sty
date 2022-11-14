@@ -1,0 +1,83 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{Ring}
+[2022/05/24 v0.1 LaTeX package for Black Ring Articles]
+
+\RequirePackage{geometry}
+\geometry{top=2.5cm, bottom=2.8cm, left=2.5cm , right=2.5cm}
+\RequirePackage{array} % for better arrays (eg matrices) in maths
+\RequirePackage{paralist} % very flexible & customisale lists (eg. enumerate/itemize, etc.)
+\RequirePackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+% \RequirePackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+\RequirePackage{amsfonts,graphicx,amssymb,mathtools}
+% \RequirePackage[usenames]{color}
+% \RequirePackage{fancyhdr}
+\RequirePackage{mathabx}
+\RequirePackage{mathrsfs}
+% \RequirePackage{wasysym}
+\RequirePackage{amsthm}
+\RequirePackage{xr-hyper}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[bookmarksopen=true, colorlinks, linkcolor=blue, citecolor=blue]{hyperref} 
+% \RequirePackage{bookmark}
+\RequirePackage{cleveref}
+\RequirePackage{tensor} %used to make it easier to write tensors
+\RequirePackage{cancel}
+\RequirePackage{pdflscape}
+\RequirePackage{appendix}
+\RequirePackage{enumitem}
+
+%% STANDARD PAIRED DELIMITERS
+\DeclarePairedDelimiter{\bangle}{\langle}{\rangle}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\squareBrace}{[}{]}
+\DeclarePairedDelimiter{\curlyBrace}{\{}{\}}
+\DeclarePairedDelimiter{\PoissonB}{\{}{\}}
+\DeclarePairedDelimiter{\evalAt}{.}{\vert}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+%% COMMANDS RELATED TO STANDARD MATH
+\newcommand{\LHS}{left-hand side}
+\newcommand{\RHS}{right-hand side}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\p}{\partial}
+\newcommand{\Ker}{\text{Ker}}
+\newcommand{\coKer}{\text{coKer}}
+\newcommand{\Range}{\text{range}}
+\newcommand{\UnitSphere}{\mathbb{S}}
+\newcommand{\Laplace}{\bigtriangleup}
+% \newcommand{\dim}{\text{dim}}
+\newcommand{\ImagUnit}{\mathbbm{i}}
+\newcommand{\bOne}{\mathbbm{1}}
+\newcommand{\Identity}{\text{Id}}
+\newcommand{\BumpFunction}{\chi}
+\newcommand{\supp}{\text{supp}\,}
+\newcommand{\Span}{\text{Span}\,}
+\newcommand{\residue}{\text{res}\,}
+\newcommand{\local}{{loc}}
+\newcommand{\Distribution}{\mathcal{D}}
+\newcommand{\Boundary}{\partial}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\Divergence}{\text{div}}
+\newcommand{\Curl}{\text{curl}}
+\newcommand{\IdentityMatrix}{\iota}
+\newcommand{\SolutionOp}{\mathcal{S}}
+\newcommand{\InfGen}{\mathcal{A}}
+\newcommand{\InteriorProd}{i}
+\newcommand{\Interval}{\mathcal{I}}
+\newcommand{\Hom}{\text{Hom}}
+
+
+\let\myDate\date
+\endinput
+%%
+%% End of file 'Ring.sty'
