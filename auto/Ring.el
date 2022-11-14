@@ -46,7 +46,6 @@
     "ImagUnit"
     "bOne"
     "Identity"
-    "BumpFunction"
     "supp"
     "Span"
     "residue"
@@ -60,8 +59,8 @@
     "SolutionOp"
     "InfGen"
     "InteriorProd"
-    "Interval"
     "Hom"
+    "Lie"
     "myDate")
    (LaTeX-add-mathtools-DeclarePairedDelimiters
     '("bangle" "")

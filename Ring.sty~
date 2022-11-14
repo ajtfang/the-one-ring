@@ -59,6 +59,7 @@
 \newcommand{\ImagUnit}{\mathbbm{i}}
 \newcommand{\bOne}{\mathbbm{1}}
 \newcommand{\Identity}{\text{Id}}
+\newcommand{\BumpFunction}{\chi}
 \newcommand{\supp}{\text{supp}\,}
 \newcommand{\Span}{\text{Span}\,}
 \newcommand{\residue}{\text{res}\,}
@@ -72,8 +73,8 @@
 \newcommand{\SolutionOp}{\mathcal{S}}
 \newcommand{\InfGen}{\mathcal{A}}
 \newcommand{\InteriorProd}{i}
+\newcommand{\Interval}{\mathcal{I}}
 \newcommand{\Hom}{\text{Hom}}
-\newcommand{\Lie}{\mathcal{L}}
 
 
 \let\myDate\date
