@@ -1,0 +1,174 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[]{amsmath}
+\usepackage{amsthm}
+\usepackage[]{upgreek}
+\usepackage{xcolor}
+\usepackage[]{gensymb}
+\usepackage[]{graphicx}
+\usepackage[]{nicefrac}
+\usepackage{tikz-cd} 
+\usepackage{pgfplots}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usepackage[]{textgreek}
+\usepackage[]{url}
+\usepackage{xcolor,cancel}
+\usepackage{pdfpages}
+\usepackage[]{float}
+\usepackage{braket}
+\usepackage{graphicx, amssymb}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\pagestyle{headings}
+\usepackage{sectsty}
+\usepackage{slashed}
+\usepackage[toc,page]{appendix}
+\usepackage{tocloft}
+\usepackage{lscape}
+\usepackage{bbm}
+\usepackage{tcolorbox}
+\usepackage[numbers]{natbib}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem*{example}{Example}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{remark}{Remark}
+\newtheorem{prop}{Proposition}
+\newtheorem{definition}{Definition}[section]
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\oss}{\underset{o}{\subset}}
+\renewcommand{\phi}{\varphi}
+ \geometry{
+ a4paper,
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm
+ }
+ \begin{document}
+\section{Singly Spinning Black Rings in $(r,\theta)$ Coordinates}
+\subsection{Geometry}
+ The singly spinning black ring solution is a 5D solution to the Einstein vacuum equation, 
+\begin{eqnarray}
+\mathrm{Ric}(g)=0
+\end{eqnarray} 
+One can define the singly spinning black ring exterior as the smooth manifold, 
+ \begin{eqnarray}
+ \mathcal{M}=\mathbb{R}\times(\mathbb{R}^4\setminus(\mathbb{S}^1\times \mathbb{B}^3))
+ \end{eqnarray}
+ with metric in coordinates $(t,r,\theta,\phi,\psi)$,
+ \iffalse
+ \begin{eqnarray}
+ g\doteq\begin{pmatrix}
+ -\frac{f(r)}{h(\theta)}&0&0&0&\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big)\\
+ 0&\frac{h(\theta)}{(1-\frac{r^2}{R^2})(1+\frac{r\cos\theta}{R})^2p(r)}&0&0&0\\
+ 0&0&\frac{r^2h(\theta)}{(1+\frac{r\cos\theta}{R})^2q(\theta)}&0&0\\
+ 0&0&0&\frac{r^2q(\theta)\sin^2\theta}{(1+\frac{r\cos\theta}{R})^2}&0\\
+\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big) &0&0&0&\frac{R^2(1-\frac{r^2}{R^2})h(\theta)p(r)}{(1+\frac{r\cos\theta}{R})^2f(r)}-\frac{K^2(1-\frac{r}{R})^2}{r^2f(r)h(\theta)}
+ \end{pmatrix}
+ \end{eqnarray}
+ \fi
+ \begin{eqnarray}
+ g&\doteq&-\frac{f(r)}{h(\theta)}dt\otimes dt+\frac{h(\theta)}{(1-\frac{r^2}{R^2})(1+\frac{r\cos\theta}{R})^2p(r)}dr\otimes dr+\frac{r^2h(\theta)}{(1+\frac{r\cos\theta}{R})^2q(\theta)}d\theta\otimes d\theta\\
+ &&+\frac{r^2q(\theta)\sin^2\theta}{(1+\frac{r\cos\theta}{R})^2}d\phi\otimes d\phi+\Big(\frac{R^2(1-\frac{r^2}{R^2})h(\theta)p(r)}{(1+\frac{r\cos\theta}{R})^2f(r)}-\frac{K^2(1-\frac{r}{R})^2}{r^2f(r)h(\theta)}\Big)d\psi\otimes d\psi\nonumber\\
+ &&+\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big)\big(dt\otimes d\psi+d\psi\otimes dt\big)\nonumber
+ \end{eqnarray}
+ with the following definitions, 
+ \begin{eqnarray}
+ f(r)\doteq1-\frac{r_+\cosh^2\sigma}{r}&\qquad& h(\theta)=1+\frac{r_+\cosh^2\sigma}{R}\cos\theta\\
+ p(r)\doteq1-\frac{r_+}{R}&\qquad& q(\theta)\doteq1+\frac{r_+}{R}\cos\theta\\
+ K&\doteq&r_+R\sinh\sigma\cosh\sigma\sqrt{\frac{R+r_+\cosh^2\sigma}{R-r_+\cosh^2\sigma}}
+ \end{eqnarray}
+ and coordinate ranges, 
+ \begin{eqnarray}
+ t\in \mathbb{R}\quad r\in (r_+,R)\quad \theta\in [0,\pi)\quad \phi,\psi\in \Big[0,\frac{2\pi R}{\sqrt{R^2+r_+^2}}\Big)
+ \end{eqnarray}
+ $r=r_+<R$ corresponds to the future event horizon, $\sigma$ is a parameter and $R$ sets the scale of the solution. Note that, the vector field $\partial_t$ is null at,
+ \begin{eqnarray}
+ g_{tt}=0\implies r=r_+\cosh^2\sigma
+ \end{eqnarray}
+ which corresponds to the ergosurface. So the ergoregion is given by, 
+ \begin{eqnarray}
+ r\in (r_+,r_e\doteq r_+\cosh^2\sigma)
+ \end{eqnarray}
+ Note that one requires the `equilibrium' condition, 
+ \begin{eqnarray}
+ \cosh^2\sigma=\frac{2R^2}{r_+^2+R^2}
+ \end{eqnarray}
+ to avoid conical singularities. Thus, 
+ \begin{eqnarray}
+ f(r)\doteq1-\frac{r_e}{r}&\qquad& h(\theta)=1+\frac{2Rr_+}{r_+^2+R^2}\cos\theta\\
+ p(r)\doteq1-\frac{r_+}{R}&\qquad& q(\theta)\doteq1+\frac{r_+}{R}\cos\theta\\
+ K&\doteq&r_e(r_++R)\sqrt{\frac{R+r_+}{2(R-r_+)}}\\
+ r_e&\doteq&\frac{2R^2r_+}{(r_+^2+R^2)}
+ \end{eqnarray}
+ The inverse metric is the following, 
+ \begin{eqnarray}
+ g^{-1}&=&-\Big(\frac{h(\theta)}{f(r)}-\frac{K^2(R-r)(R+r\cos\theta)^2}{r^2R^4(r+R)p(r)f(r)h(\theta)}\Big)\partial_t\otimes\partial_t+\frac{(R^2-r^2)(R+r\cos\theta)^2p(r)}{R^4h(\theta)}\partial_r\otimes\partial_r\\
+ &&+\frac{(R+r\cos\theta)^2q(\theta)}{r^2R^2h(\theta)}\partial_{\theta}\otimes\partial_{\theta}+\frac{(R+r\cos\theta)^2}{R^2r^2q(\theta)\sin^2\theta}\partial_{\phi}\otimes\partial_{\phi}+\frac{(R+r\cos\theta)^2f(r)}{R^2(R^2-r^2)h(\theta)p(r)}\partial_{\psi}\otimes\partial_{\psi}\nonumber\\
+ &&-\frac{K(R+r\cos\theta)^2}{rR^3(r+R)h(\theta)p(r)}(\partial_{t}\otimes\partial_{\psi}+\partial_{\psi}\otimes\partial_t)\nonumber
+ \end{eqnarray}
+ Note the vector field, 
+ \begin{eqnarray}
+ k=\frac{\partial}{\partial t}+\Omega_H\frac{\partial}{\partial\psi} \qquad \Omega_H^2=\frac{R-r_+}{2R^2(R+r_+)}
+ \end{eqnarray}
+is null future event horizon. Note that $\psi$ is has period $\psi\sim \psi+\Delta\psi$ with $\Delta\psi\doteq\frac{2\pi R}{\sqrt{R^2+r_+^2}}$ so $\Omega_H$ is not the true angular velocity of the horizon. Defining $\tilde{\psi}=\frac{2\pi}{\Delta\psi}\psi$ gives
+\begin{align}
+\partial_{\psi}=\frac{\sqrt{R^2+r_+^2}}{R}\partial_{\tilde{\psi}}. 
+\end{align}
+So the true angular velocity of the horizon is
+\begin{align}
+\tilde{\Omega}_H=\frac{1}{R^2}\sqrt{\frac{(R-r_+)(R^2+r_+^2)}{2(R+r_+)}}.
+\end{align}
+
+
+ Now, for $r\in (r_+,r_+\cosh^2\sigma)$, $f(r)<0$ so we can make the coordinate transformation, 
+\begin{eqnarray}
+dv=dt+\frac{K}{r(r+R)\sqrt{-f(r)}p(r)}dr\qquad d\psi=d\chi+\frac{R\sqrt{-f(r)}}{(R^2-r^2)p(r)}dr
+\end{eqnarray}
+which gives the metric, 
+\iffalse
+\begin{eqnarray}
+g=\begin{pmatrix}
+ -\frac{f(r)}{h(\theta)}&0&0&0&\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big)\\
+ 0&0&0&0&\frac{R^3h(\theta)}{(R+r\cos\theta)^2\sqrt{-f(r)}}\\
+ 0&0&\frac{r^2h(\theta)}{(1+\frac{r\cos\theta}{R})^2q(\theta)}&0&0\\
+ 0&0&0&\frac{r^2q(\theta)\sin^2\theta}{(1+\frac{r\cos\theta}{R})^2}&0\\
+\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big) &\frac{R^3h(\theta)}{(R+r\cos\theta)^2\sqrt{-f(r)}}&0&0&\frac{R^2(1-\frac{r^2}{R^2})h(\theta)p(r)}{(1+\frac{r\cos\theta}{R})^2f(r)}-\frac{K^2(1-\frac{r}{R})^2}{r^2f(r)h(\theta)}
+ \end{pmatrix}
+\end{eqnarray}
+\fi
+\begin{eqnarray}
+ g&\doteq&-\frac{f(r)}{h(\theta)}dv\otimes dv+\frac{r^2h(\theta)}{(1+\frac{r\cos\theta}{R})^2q(\theta)}d\theta\otimes d\theta+\frac{r^2q(\theta)\sin^2\theta}{(1+\frac{r\cos\theta}{R})^2}d\phi\otimes d\phi\\
+ &&+\Big(\frac{R^2(1-\frac{r^2}{R^2})h(\theta)p(r)}{(1+\frac{r\cos\theta}{R})^2f(r)}-\frac{K^2(1-\frac{r}{R})^2}{r^2f(r)h(\theta)}\Big)d\chi\otimes d\chi\nonumber\\
+ &&+\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big)\big(dv\otimes d\chi+d\chi\otimes dv\big)+\frac{R^3h(\theta)}{(R+r\cos\theta)^2\sqrt{-f(r)}}(dr\otimes d\chi+d\chi\otimes dr)\nonumber
+ \end{eqnarray}
+Then one has the following for $k$, 
+\begin{eqnarray}
+k=\partial_v+\Omega_H\partial_{\chi}.
+\end{eqnarray}
+Mapping $k$ to a one-form, 
+\begin{eqnarray}
+k_{\flat}&=&\Big[\frac{K\Omega_H}{rh(\theta)}\Big(\frac{r}{R}-1\Big)-\frac{f(r)}{h(\theta)}\Big]dv+\Omega_H\frac{R^3h(\theta)}{(R+r\cos\theta)^2\sqrt{-f(r)}}dr\\
+&&+\Big[\frac{K}{rh(\theta)}\Big(\frac{r}{R}-1\Big)+\Omega_H\Big(\frac{R^2(1-\frac{r^2}{R^2})h(\theta)p(r)}{(1+\frac{r\cos\theta}{R})^2f(r)}-\frac{K^2(1-\frac{r}{R})^2}{r^2f(r)h(\theta)}\Big)\Big]d\chi
+\end{eqnarray}
+which at the future event horizon for a balanced ring gives, 
+\begin{eqnarray}
+k_{\flat}|_{r=r_+}=\frac{R^2}{\sqrt{2(R^2+r_+^2)}(R+r_+)}\frac{(R^2+r^2_0+2Rr_+\cos\theta)}{(R+r_+\cos\theta)^2}dr.
+\end{eqnarray}
+Note that,
+\begin{eqnarray}
+g(k,k)=-\frac{f(r)}{h(\theta)}+2K\Omega_H\frac{\big(\frac{r}{R}-1\big)}{rh(\theta)}+\Omega_H^2\frac{1}{f(r)h(\theta)}\Big(\frac{R^2(R^2-r^2)h(\theta)^2p(r)}{(R+r\cos\theta)^2}-\frac{(\frac{r}{R}-1)^2K^2}{r^2}\Big).
+\end{eqnarray}
+To find the surface gravity, $\kappa$, of a balanced ring we consider $d(g(k,k))|_{r=r_+}=-2\kappa k|_{r=r_+}$. Evaluating, one finds, 
+\begin{eqnarray}
+\kappa=\frac{(R-r_+)\sqrt{(R^2+r_+^2)}}{2\sqrt{2}R^2r_+}.
+\end{eqnarray}
+
+\end{document}
