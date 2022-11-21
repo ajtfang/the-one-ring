@@ -61,6 +61,15 @@
     "InteriorProd"
     "Hom"
     "Lie"
+    "Ric"
+    "InducedMetric"
+    "Constraint"
+    "TraceReversal"
+    "ConstraintPropagationOp"
+    "VectorWaveOp"
+    "LieDerivative"
+    "KillT"
+    "LinEinstein"
     "myDate")
    (LaTeX-add-mathtools-DeclarePairedDelimiters
     '("bangle" "")

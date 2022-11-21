@@ -103,7 +103,184 @@ There are three classes of modes we are interested in.
 \end{definition}
 
 For the sake of this paper, we are mainly interested in the true mode
-solutions.
+solutions. The perturbation argument should proceed roughly as follows:
+\begin{enumerate}
+\item We will perform mode perturbation on two separate operators,
+  those being  
+  \begin{equation*}
+    \LinEinstein = D_g\Ric - \widetilde{\nabla_g\otimes} D_g\Constraint(g, g^0),\qquad
+    \widetilde{\ConstraintPropagationOp},
+  \end{equation*}
+  the constraint-damped linearized Einstein operator in harmonic gauge
+  and the constraint-damped constraint propagation operator for
+  harmonic gauge respectively. Both of these operators are principally
+  the scalar wave operator and as such, should be amenable to mode
+  perturbation \emph{in the upper half plane} in a similar way to
+  Kerr-de Sitter. The main general result that we will use from the general
+  perturbation theory is that for small perturbations, the total
+  number of modes is equal (at an eigenvalue). 
+  
+\item There is an exact correspondence between the pure gauge mode
+  solutions to the linearized Einstein operator and the constraint
+  propagation operator. This gives us a way of counting the pure gauge
+  modes in the perturbation since the constraint propagation operator
+  is principally hyperbolic.
+  
+\item If we use constraint damping, then we eliminate any growing
+  modes associated to constraint violations. This would leave us in
+  the setting where there are only pure gauge modes or true
+  modes. Since we have a way of counting pure gauge modes, this shows
+  us that we must the same number of true modes in the perturbed case
+  as well.
+\end{enumerate}
+
+\section{Linearized Einstein vacuum equations}
+\label{sec:lin-eve}
+
+In this section, we introduce the linearized Einstein equations in the
+notation that we will use.  Directly linearizing \eqref{eq:EVE:Full}
+around $g$ yields the ungauged linearized Einstein equation
+\begin{equation}
+  \label{eq:linearized-EVE-ungauged}
+  D_g\Ric(h) = 0. 
+\end{equation}
+Given admissible initial data $(\Sigma_0, \InducedMetric_0, k_0)$ for $g$,
+we define the \emph{linearized constraint equation} as the
+linearization of \eqref{eq:EVE:constraint-eqns} around
+$(\InducedMetric_0, k_0)$ in terms of the linearized metric
+$\InducedMetric'$ and the linearized second fundamental form
+$k'$. % , and can be expressed as
+% \begin{equation}
+%   \label{eq:linearized-constraint-eqns}
+%   \begin{split}
+%     -\nabla^i\nabla_i \tensor[]{{\InducedMetric'}}{^j_j} + \nabla^i\nabla^j{\InducedMetric'}_{ij} +\Lambda \Trace_{g}{\InducedMetric'} &= 0,\\
+%     \nabla_i\left(k'^{ij}-\Trace_{g} k'(g)^{ij}\right) &=0,  
+%   \end{split}
+% \end{equation}
+% where the covariant derivatives are those of $g$.
+An initial data triplet $(\Sigma_0, \InducedMetric', k')$ linearized
+around $(\InducedMetric_b, k_b)$ is an \textit{admissible} initial
+data triplet for Einstein equations linearized around $g$ if
+$(\InducedMetric', k')$ satisfy the linearized constraint equations.
+Linearizing the gauged Einstein equations in \eqref{eq:EVE:gauged-eq},
+we have the linearized gauged Einstein equations
+\begin{equation}
+  \label{eq:linearized-gauged-EVE}
+  D_{g}(\Ric - \Lambda)({h}) - \nabla_{g}\otimes D_{g}\Constraint(g, g^0)(h) = 0. 
+\end{equation}
+
+\begin{definition}
+  Define the \emph{linearized gauge constraint} \begin{equation*}
+    \begin{split}
+      \Constraint_{g}{h}:={}&D_{g}\Constraint(g+{h}, g)({h})\\
+      ={}& -\nabla_{g}\cdot\TraceReversal_{g}{h}.
+    \end{split}    
+  \end{equation*}
+\end{definition}
+We have the following linearized equivalent of Lemma
+\ref{lemma:EVE:nonlinear-constraint-prop}.
+\begin{lemma}
+  \label{lemma:EVE:linearized-constraint-prop}
+  Let ${h}$ solve \eqref{eq:linearized-gauged-EVE}. Then ${h}$
+  also satisfies
+  \begin{equation*}
+    \ConstraintPropagationOp_{g}(\Constraint_{g}{h}) = 0, \qquad
+    \ConstraintPropagationOp_{g}\psi = \VectorWaveOp_g\psi, 
+  \end{equation*}
+  where $\VectorWaveOp_g = \nabla^\alpha \nabla_\alpha $ denotes
+  the wave operator acting on 1-tensors. 
+\end{lemma}
+\begin{proof}
+  The lemma follows directly by applying the twice-contracted
+  linearized second Bianchi identity to the gauged linearized Einstein
+  equation.
+\end{proof}
+\begin{remark}
+  From Lemma \ref{lemma:EVE:linearized-constraint-prop}, it is clear
+  that if $(\evalAt*{\Constraint_{g}{h}}_{\Sigma_0}, \evalAt*{\LieDerivative_{\KillT}\Constraint_{g}{h}}_{\Sigma_0}) = (0, 0)$, then
+  $\Constraint_{g}{h} = 0$ uniformly.  
+\end{remark}
+
+Finally, we remark that any solution ${h}$ to the ungauged linearized
+Einstein's equations \eqref{eq:linearized-EVE-ungauged} can be put
+into the linearized gauge $\Constraint_{g}({h}) = 0$ by finding some
+infinitesimal diffeomorphism
+$\nabla_{g}\otimes \omega$\footnote{Observe that in terms of the Lie
+  derivative, we have that
+  \begin{equation*}
+    \nabla_{g}\otimes \omega = \frac{1}{2}\LieDerivative_{\omega^\sharp}g.
+  \end{equation*}
+}
+such that
+\begin{equation}
+  \Constraint_{g}({h} + \nabla_{g}\otimes \omega) = 0,
+\end{equation}
+as general covariance implies that
+\begin{equation*}
+  D_{g}\Ric(\nabla_{g}\otimes \omega) = 0
+\end{equation*}
+for any one-form $\omega\in C^\infty(\mathcal{M},
+T^*\mathcal{M})$. This is equivalent to finding some
+$\omega$ such that
+\begin{equation}
+  \label{eq:linearized-gauge-fixer}
+  \Box_{g}^\Upsilon\omega = 2\Constraint_{g}({h}),\qquad
+  \Box_{g}^{\Upsilon} = -2\Constraint_{g}\circ \nabla_{g}\otimes ,
+\end{equation}
+which is principally $\VectorWaveOp_g$, and in fact, in our case we
+can calculate that
+\begin{equation*}
+  \Box_{g}^\Upsilon = \VectorWaveOp_g. 
+\end{equation*}
+Solving for $\omega$ satisfying \eqref{eq:linearized-gauge-fixer} with
+Cauchy data
+$\left.(\omega, \LieDerivative_{\KillT}\omega)\right\vert_{\Sigma_0}=
+0$ then ensures that $h +\nabla_g\otimes \omega$ has the same initial
+data as $h$.
+
+
+\subsection{Constraint damping}
+\label{sec:constraint-damping}
+
+The goal of constraint damping is to modify the operator
+\begin{equation*}
+  \nabla_g\otimes
+\end{equation*}
+by some lower-order terms so that the quasinormal modes of the
+constraint propagation operator $\ConstraintPropagationOp_g$ lie
+strictly in the exponentially decaying half-space. This will force any
+exponentially growing modes of the constraint-damped linearized
+Einstein operator to satisfy the harmonic gauge constraints.
+
+We remark that since this is a lower-order modification, this will not
+affect the principal hyperbolic nature of the linearized Einstein
+operator in harmonic gauge.
+
+We will combine two natural lower-order modifications of $\nabla_g\otimes$:
+\begin{enumerate}
+\item Conjugation of $\delta_g\otimes$ with an exponential,
+  \begin{equation*}
+    e^{-\gamma t}\nabla_g\otimes e^{\gamma t}.
+  \end{equation*}
+\item Using the conformally weighted
+  \begin{equation*}
+    \nabla_{e^{-2\gamma t}g}\otimes.
+  \end{equation*}
+\end{enumerate}
+Combining these two in a general linear combination, we have the
+following modification of $\nabla_g\otimes$:
+\begin{equation*}
+  \widetilde{\nabla_g\otimes}\omega
+  := \nabla_G\otimes\omega
+  + \gamma_1 dt\cdot \omega
+  - \gamma_2 \left(i_{\nabla_t}\omega\right)g, \qquad
+  \gamma_1,\gamma_2 \in \Real.
+\end{equation*}
+The main result is then as follows.
+\begin{theorem}
+  Let
+\end{theorem}
+
 
 \end{document}
 
