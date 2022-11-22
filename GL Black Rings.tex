@@ -51,7 +51,29 @@
  top=20mm,
  bottom=20mm
  }
+  \newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+  \title{	\normalsize \textsc{} 	% Subtitle
+		 		\LARGE \textbf{\uppercase{In The Land of Mordor, In The Fires of Mount Doom}}	% Title
+		}
+		\date{}
  \begin{document}
+ \maketitle
+ \section{Boosted Schwarzschild Black Strings}
+ The boosted Schwarschild black string is a $5D$ solution to the vacuum Einstein equation, 
+ \begin{align}
+ \mathrm{Ric}(g)=0,
+ \end{align}
+ which is asymptotically the product of $4D$ Minkowski, $\mathrm{Mink}_4$, and a circle of radius $R$, $\mathbb{S}^1_{R}$. It has metric
+ \begin{align}
+ g&\doteq-\big(1-[1-D(r)]\cosh^2(\sigma)\big)dt\otimes dt+\frac{1}{D(r)}dr\otimes dr+r^2d\theta\otimes d\theta+r^2\sin^2\theta d\phi\otimes d\phi\\
+ &\nonumber\quad+\big(1+[1-D(r)]\sinh^2(\sigma)\big)dz\otimes dz-\big(1-D(r)\big)\cosh(\sigma)\sinh(\sigma)(dt\otimes dz+dz\otimes dt).
+ \end{align}
+ The coordinate ranges are $t\in[0,\infty)$, $r\in (2M,\infty)$ and $z\in [0,2\pi)$. One can `unboost' the string with the coordinate transformation
+ \begin{align}
+ \tau&=\cosh\sigma t+\sinh\sigma z,\\
+ \zeta&=\sinh\sigma t+\cosh\sigma z.
+ \end{align}
+ In this case $\zeta,\tau $ have infinite image, so the string direction when unboosted is not compact?
 \section{Singly Spinning Black Rings in $(r,\theta)$ Coordinates}
 \subsection{Geometry}
  The singly spinning black ring solution is a 5D solution to the Einstein vacuum equation, 
