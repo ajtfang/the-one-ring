@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     57737,       1635]
-NotebookOptionsPosition[     54205,       1564]
-NotebookOutlinePosition[     54639,       1581]
-CellTagsIndexPosition[     54596,       1578]
+NotebookDataLength[     57811,       1636]
+NotebookOptionsPosition[     54278,       1565]
+NotebookOutlinePosition[     54712,       1582]
+CellTagsIndexPosition[     54669,       1579]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1553,12 +1553,13 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{"Sum", "[", 
   FractionBox[
-   RowBox[{"(", 
-    RowBox[{"-", "1"}], ")"}], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "n"], 
    SuperscriptBox["R", "n"]], "]"}]], "Input",
  CellChangeTimes->{{3.878119727910472*^9, 3.878119729220791*^9}, {
-  3.878119862979855*^9, 
-  3.878119874807176*^9}},ExpressionUUID->"618042c5-6c25-4a1a-99e8-\
+  3.878119862979855*^9, 3.878119874807176*^9}, {3.878119932074458*^9, 
+  3.878119932311842*^9}},ExpressionUUID->"618042c5-6c25-4a1a-99e8-\
 cbd3e996362b"]
 }, Open  ]]
 },
@@ -1635,7 +1636,7 @@ Cell[CellGroupData[{
 Cell[46172, 1349, 927, 27, 69, "Input",ExpressionUUID->"33252a2d-22bd-4c68-95df-6b239370fffe"],
 Cell[47102, 1378, 6751, 171, 142, "Output",ExpressionUUID->"20fc1715-0178-43bf-b9d9-e7cc8d8d83a2"]
 }, Open  ]],
-Cell[53868, 1552, 321, 9, 48, "Input",ExpressionUUID->"618042c5-6c25-4a1a-99e8-cbd3e996362b"]
+Cell[53868, 1552, 394, 10, 50, "Input",ExpressionUUID->"618042c5-6c25-4a1a-99e8-cbd3e996362b"]
 }, Open  ]]
 }
 ]
